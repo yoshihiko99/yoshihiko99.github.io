@@ -1,6 +1,6 @@
 import * as React from "react";
-import { RenderPageResult } from "next/dist/shared/lib/utils";
-import Document, {Html, Head, Main, NextScript, DocumentInitialProps} from "next/document";
+import {RenderPageResult} from "next/dist/shared/lib/utils";
+import Document, {DocumentInitialProps, Head, Html, Main, NextScript} from "next/document";
 import createEmotionServer from "@emotion/server/create-instance";
 import createEmotionCache from "../createEmotionCache";
 import theme from "../theme";
@@ -11,15 +11,13 @@ export default class MyDocument extends Document {
             <Html lang="ja">
                 <Head>
                     {/* PWA primary color */}
-                    <meta name="theme-color" content={theme.palette.primary.main} />
-                    <link
-                        rel="stylesheet"
-                        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-                    />
+                    <meta name="theme-color" content={theme.palette.primary.main}/>
+                    <link href="https://fonts.googleapis.com/css2?family=Square+Peg&family=Ubuntu:wght@400&display=swap"
+                          rel="stylesheet"/>
                 </Head>
                 <body>
-                <Main />
-                <NextScript />
+                <Main/>
+                <NextScript/>
                 </body>
             </Html>
         );
@@ -30,7 +28,7 @@ MyDocument.getInitialProps = async (ctx): Promise<DocumentInitialProps> => {
     const originalRenderPage = ctx.renderPage;
 
     const cache = createEmotionCache();
-    const { extractCriticalToChunks } = createEmotionServer(cache);
+    const {extractCriticalToChunks} = createEmotionServer(cache);
 
     ctx.renderPage = (): RenderPageResult | Promise<RenderPageResult> =>
         originalRenderPage({
@@ -47,7 +45,7 @@ MyDocument.getInitialProps = async (ctx): Promise<DocumentInitialProps> => {
         <style
             data-emotion={`${style.key} ${style.ids.join(" ")}`}
             key={style.key}
-            dangerouslySetInnerHTML={{ __html: style.css }}
+            dangerouslySetInnerHTML={{__html: style.css}}
         />
     ));
 

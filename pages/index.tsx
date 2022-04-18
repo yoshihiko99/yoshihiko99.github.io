@@ -1,19 +1,23 @@
-import type { NextPage } from 'next'
+import type {NextPage} from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Navigation from "@/components/Navigation";
 
 const Home: NextPage = () => {
-  return (
-      <div>
-        <Head>
-          <title>Yuta Euchi</title>
-        </Head>
-        <main>
-          <h1>Portfolio</h1>
-        </main>
-      </div>
-  )
+    return (
+        <div>
+            <Head>
+                <title>Yuta Euchi</title>
+            </Head>
+
+            <Navigation/>
+
+            <main>
+                <div className="my-3">
+                    <h1>Portfolio</h1>
+                </div>
+            </main>
+        </div>
+    )
 }
 
 export default Home

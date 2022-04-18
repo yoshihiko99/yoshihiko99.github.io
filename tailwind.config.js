@@ -1,12 +1,17 @@
 module.exports = {
-  mode: "jit",
-  purge: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-  ],
-  content: [],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
+    mode: "jit",
+    purge: [
+        "./pages/**/*.{js,ts,jsx,tsx}",
+        "./components/**/*.{js,ts,jsx,tsx}",
+    ],
+    content: [],
+    theme: {
+        extend: {
+            fontFamily: {
+                logo: ['Square Peg'],
+                ubuntu: ['Ubuntu'],
+            },
+        },
+    },
+    plugins: [],
 }
