@@ -13,7 +13,6 @@ const Home: NextPage = () => {
 
             <main>
                 <div className="my-3">
-                    <h1>Portfolio</h1>
                 </div>
             </main>
         </div>
