@@ -11,6 +11,14 @@ module.exports = {
                 logo: ['Square Peg'],
                 ubuntu: ['Ubuntu'],
             },
+            keyframes: {
+                blink: {
+                    "0%": {opacity: 0},
+                },
+            },
+            animation: {
+                blink: "blink 1.5s steps(2) infinite",
+            },
         },
     },
     plugins: [],
