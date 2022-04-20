@@ -6,8 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --cache --fix src && prettier --write src",
+    "lint": "run-s lint:*",
+    "lint:eslint": "eslint . --ext .ts,.tsx --fix",
+    "lint:prettier": "prettier --write .",
+    "prepare": "simple-git-hooks",
     "export": "next export"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npm run lint"
   },
   "engines": {
     "node": ">=16"
@@ -40,9 +46,11 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^5.2.0",
     "eslint-plugin-react": "^7.29.4",
+    "npm-run-all": "^4.1.5",
     "postcss": "^8.4.12",
     "prettier": "^2.6.2",
     "prettier-config-standard": "^5.0.0",
+    "simple-git-hooks": "^2.7.0",
     "tailwindcss": "^3.0.24",
     "typescript": "4.6.3"
   }
