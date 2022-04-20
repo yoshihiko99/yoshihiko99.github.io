@@ -1,12 +1,12 @@
-import React from 'react';
-import Line from "@/components/terminal-like/components/Line";
+import React from 'react'
+import Line from '@/components/terminal-like/components/Line'
 
 interface Props {
-    text: string;
+  text: string
 }
 
 const ResponseLine: React.VFC<Props> = (props) => {
-    return <Line text={props.text}/>;
-};
+  return <Line text={props.text} />
+}
 
-export default ResponseLine;
+export default ResponseLine

@@ -1,3 +1,3 @@
-import Terminal from './Terminal';
+import Terminal from './Terminal'
 
-export default Terminal;
+export default Terminal
