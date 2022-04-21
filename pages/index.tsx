@@ -13,9 +13,10 @@ const Home: NextPage = () => {
 
       <Navigation />
 
-      <main>
+      <main className="container mx-auto max-w-5xl sm:w-3/5 p-3">
         <div className="my-3">
           <Terminal
+            className="flex justify-center"
             lines={[
               { type: 'cmd', text: 'pwd' },
               { type: 'res', text: "Yuta Euchi's portfolio " },
