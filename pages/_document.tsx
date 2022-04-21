@@ -19,12 +19,16 @@ export default class MyDocument extends Document {
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
           <meta charSet="UTF-8" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+          />
           <link
             href="https://fonts.googleapis.com/css2?family=Square+Peg&family=Ubuntu:wght@400&display=swap"
             rel="stylesheet"
           />
         </Head>
-        <body className="bg-white">
+        <body className="p-safe">
           <Main />
           <NextScript />
         </body>

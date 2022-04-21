@@ -7,6 +7,7 @@ import { CacheProvider, EmotionCache } from '@emotion/react'
 import theme from '../theme'
 import createEmotionCache from '../createEmotionCache'
 import 'tailwindcss/tailwind.css'
+import '@/styles/globals.css'
 
 const clientSideEmotionCache = createEmotionCache()
 
