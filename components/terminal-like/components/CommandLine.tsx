@@ -15,10 +15,8 @@ const CommandLine: React.VFC<Props> = ({
   return (
     <>
       <Line text={prefix + text}>
-        {cursor ? (
+        {cursor && (
           <span className="content-[''] align-middle w-1.5 h-5 inline-block bg-gray-900 animate-blink" />
-        ) : (
-          ''
         )}
       </Line>
     </>

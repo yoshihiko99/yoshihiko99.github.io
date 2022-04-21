@@ -17,9 +17,14 @@ const Home: NextPage = () => {
         <div className="my-3">
           <Terminal
             lines={[
-              { type: 'cmd', text: 'cat test' },
-              { type: 'res', text: 'test message' },
-              { type: 'cmd', text: 'cd' }
+              { type: 'cmd', text: 'pwd' },
+              { type: 'res', text: "Yuta Euchi's portfolio " },
+              { type: 'cmd', text: 'ls' },
+              {
+                type: 'res',
+                text: 'about-me\u2003works\u2003my-skill-set'
+              },
+              { type: 'cmd', text: 'cat about-me' }
             ]}
             canStart={true}
           />

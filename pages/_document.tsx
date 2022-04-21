@@ -18,6 +18,7 @@ export default class MyDocument extends Document {
         <Head>
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
+          <meta charSet="UTF-8" />
           <link
             href="https://fonts.googleapis.com/css2?family=Square+Peg&family=Ubuntu:wght@400&display=swap"
             rel="stylesheet"

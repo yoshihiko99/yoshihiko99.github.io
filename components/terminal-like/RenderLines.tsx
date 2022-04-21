@@ -21,43 +21,43 @@ const RenderLines: React.VFC<Props> = ({
   canStart,
   typingInterval = 50,
   ComputerInterval = 200,
-  UserInterval = 1000
+  UserInterval = 1500
 }) => {
   const [typedLines, setTypedLines] = React.useState<Array<LineProps>>([])
 
   const type = () => {
     if (canStart && typedLines.length <= lines.length) {
-      const currentLine = typedLines[typedLines.length - 1]
-      if (
-        typedLines.length !== 0 &&
-        currentLine.text.length < lines[typedLines.length - 1].text.length
-      ) {
-        if (currentLine.type === 'cmd') {
+      const typedLine = typedLines[typedLines.length - 1]
+      const line = lines[typedLines.length - 1]
+      if (typedLines.length !== 0 && typedLine.text.length < line.text.length) {
+        if (typedLine.type === 'cmd') {
           // eslint-disable-next-line prefer-const
           let timerId: NodeJS.Timeout
-          const nextChar =
-            lines[typedLines.length - 1].text[currentLine.text.length]
+          const nextChar = line.text[typedLine.text.length]
 
+          // type a char
           const type = () => {
-            const newTypingLines = [...typedLines]
-            newTypingLines[newTypingLines.length - 1] = {
-              ...typedLines[newTypingLines.length - 1],
-              text: currentLine.text.concat(nextChar)
+            const newTypedLines = [...typedLines]
+            newTypedLines[newTypedLines.length - 1] = {
+              ...typedLine,
+              text: typedLine.text.concat(nextChar)
             }
-            setTypedLines(newTypingLines)
+            setTypedLines(newTypedLines)
             clearTimeout(timerId)
           }
-          const isNewLine = currentLine.text.length === 0
+
+          const isNewLine = typedLine.text.length === 0
           timerId = setTimeout(type, isNewLine ? UserInterval : typingInterval)
         } else if (typedLines[typedLines.length - 1].type === 'res') {
-          const newTypingLines = [...typedLines]
-          newTypingLines[newTypingLines.length - 1] = {
-            ...typedLines[newTypingLines.length - 1],
+          const newTypedLines = [...typedLines]
+          newTypedLines[newTypedLines.length - 1] = {
+            ...typedLine,
             text: lines[typedLines.length - 1].text
           }
-          setTypedLines(newTypingLines)
+          setTypedLines(newTypedLines)
         }
       } else {
+        // create new line
         if (typedLines.length < lines.length) {
           // eslint-disable-next-line prefer-const
           let timerId: NodeJS.Timeout
@@ -71,6 +71,7 @@ const RenderLines: React.VFC<Props> = ({
                 cursor: true
               }
             ]
+            // The cursor is only on the last line.
             if (newTypingLines.length > 1) {
               newTypingLines[newTypingLines.length - 2] = {
                 ...typedLines[newTypingLines.length - 2],
@@ -87,9 +88,9 @@ const RenderLines: React.VFC<Props> = ({
     }
   }
 
-  // useEffect(type, [])
   useEffect(type, [canStart, typedLines])
 
+  // parse LineProps to Line component
   const parser = (line: LineProps) => {
     if (line.type === 'cmd') {
       return <CommandLine text={line.text} cursor={line.cursor} />

@@ -6,7 +6,7 @@ interface Props {
   children?: React.ReactNode
 }
 
-const ResponseLine: React.VFC<Props> = (props) => {
+const Line: React.VFC<Props> = (props) => {
   return (
     <div className={`font-ubuntu ` + props.className}>
       {props.text}
@@ -15,4 +15,4 @@ const ResponseLine: React.VFC<Props> = (props) => {
   )
 }
 
-export default ResponseLine
+export default Line
