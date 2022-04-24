@@ -11,6 +11,7 @@ interface LineProps {
 interface Props {
   lines: Array<LineProps>
   canStart: boolean
+  lineClassName?: string
   typingInterval?: number
   ComputerInterval?: number
   UserInterval?: number
@@ -19,6 +20,7 @@ interface Props {
 const RenderLines: React.VFC<Props> = ({
   lines,
   canStart,
+  lineClassName,
   typingInterval = 50,
   ComputerInterval = 200,
   UserInterval = 1500
@@ -93,9 +95,15 @@ const RenderLines: React.VFC<Props> = ({
   // parse LineProps to Line component
   const parser = (line: LineProps) => {
     if (line.type === 'cmd') {
-      return <CommandLine text={line.text} cursor={line.cursor} />
+      return (
+        <CommandLine
+          text={line.text}
+          cursor={line.cursor}
+          className={lineClassName}
+        />
+      )
     } else if (line.type === 'res') {
-      return <ResponseLine text={line.text} />
+      return <ResponseLine text={line.text} className={lineClassName} />
     }
   }
 

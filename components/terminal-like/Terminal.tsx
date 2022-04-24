@@ -9,15 +9,18 @@ interface LineProps {
 interface Props {
   lines: Array<LineProps>
   canStart: boolean
-  className?: string
+  outerClassName?: string
+  lineClassName?: string
 }
 
 const Terminal: React.VFC<Props> = (props) => {
   return (
-    <div className={props.className}>
-      <div className="min-w-max w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-        <RenderLines lines={props.lines} canStart={props.canStart} />
-      </div>
+    <div className={props.outerClassName}>
+      <RenderLines
+        lines={props.lines}
+        canStart={props.canStart}
+        lineClassName={props.lineClassName}
+      />
     </div>
   )
 }
