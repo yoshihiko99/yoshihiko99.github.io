@@ -57,6 +57,26 @@ const RenderLines: React.VFC<Props> = ({
             text: lines[typedLines.length - 1].text
           }
           setTypedLines(newTypedLines)
+
+          // } else if (typedLines[typedLines.length - 1].type === 'loading') {
+          // // eslint-disable-next-line prefer-const
+          // let timerId: NodeJS.Timeout
+          // const nextChar = line.text[typedLine.text.length]
+          //
+          // // type a char
+          // const type = () => {
+          //   const newTypedLines = [...typedLines]
+          //   newTypedLines[newTypedLines.length - 1] = {
+          //     ...typedLine,
+          //     text: typedLine.text.concat(nextChar)
+          //   }
+          //   setTypedLines(newTypedLines)
+          //   clearTimeout(timerId)
+          // }
+          //
+          // const isNewLine = typedLine.text.length === 0
+          // timerId = setTimeout(type, isNewLine ? UserInterval : typingInterval)
+          // }
         }
       } else {
         // create new line
