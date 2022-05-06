@@ -50,16 +50,23 @@ const Home: NextPage = () => {
         </div>
 
         <div ref={refAboutMe} className="py-28">
-          <h2 className="text-5xl mb-10 w-full">About Me</h2>
+          <h2 className="text-5xl mb-6 w-full">About Me</h2>
           {inViewAboutMe && (
-            <div className="animate__animated animate__fadeInUp w-full grid sm:grid-cols-2">
-              <div>
+            <div className="animate__animated animate__fadeInUp w-full grid md:grid-cols-2">
+              <div className="my-auto">
                 <p>
                   東京工業大学大学院情報理工学院、現在修士一年。神奈川県出身のエンジニア。
                   大学3年の夏、スキルアップをするため東大発ベンチャー「株式会社Drafty」に所属する。
                   テックリードとしてエンジニアチームのリーダーを就任、メンバー7人を統率する。
                   2年間のインターン業務を経て、AWSクラウドサーバー構築、Webアプリケーション（フロントエンド・バックエンド）作成、社内用Pythonツールなど、幅広く開発業務を行う。
                 </p>
+              </div>
+              <div className="pt-10 md:pl-10 md:pt-0">
+                <img
+                  className="rounded-full border-8 m-auto md:max-w-xs w-80"
+                  src="/no_image.png"
+                  alt="プロフィール画像"
+                />
               </div>
             </div>
           )}
