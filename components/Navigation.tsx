@@ -22,9 +22,10 @@ const Navigation: React.FC<Props> = () => {
               <NavLink href="/" active={router.pathname === '/'}>
                 Home
               </NavLink>
-              <NavLink href="/works" active={router.pathname === '/works'}>
-                Works
-              </NavLink>
+              <NavLink href="#about-me">About Me</NavLink>
+              <NavLink href="#works">Works</NavLink>
+              <NavLink href="#my-skill-set">My Skill Set</NavLink>
+              <NavLink href="#links">Links</NavLink>
               <NavLink
                 href="https://github.com/yoshihiko99/yoshihiko99.github.io"
                 target={'_blank'}>

@@ -50,7 +50,9 @@ const Home: NextPage = () => {
         </div>
 
         <div ref={refAboutMe} className="py-28">
-          <h2 className="text-5xl mb-6 w-full">About Me</h2>
+          <a id="about-me">
+            <h2 className="text-5xl mb-6 w-full">About Me</h2>
+          </a>
           {inViewAboutMe && (
             <div className="animate__animated animate__fadeInUp w-full grid md:grid-cols-2">
               <div className="my-auto">
@@ -73,7 +75,9 @@ const Home: NextPage = () => {
         </div>
 
         <div className="py-10">
-          <h2 className="text-5xl mb-3 w-full">Works</h2>
+          <a id="works">
+            <h2 className="text-5xl mb-3 w-full">Works</h2>
+          </a>
 
           <div ref={refWorksTeleLabo} className="mb-10">
             {inViewWorksTeleLabo && (
@@ -111,11 +115,15 @@ const Home: NextPage = () => {
         </div>
 
         <div className="py-10">
-          <h2 className="text-5xl mb-3 w-full">My Skill Set</h2>
+          <a id="my-skill-set">
+            <h2 className="text-5xl mb-3 w-full">My Skill Set</h2>
+          </a>
         </div>
 
         <div className="py-10">
-          <h2 className="text-5xl mb-3 w-full">Links</h2>
+          <a id="links">
+            <h2 className="text-5xl mb-3 w-full">Links</h2>
+          </a>
         </div>
       </main>
     </div>
