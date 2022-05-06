@@ -40,7 +40,7 @@ const Home: NextPage = () => {
               { type: 'cmd', text: 'ls' },
               {
                 type: 'res',
-                text: 'about-me\u2003works\u2003my-skill-set\u2003follow-me'
+                text: 'about-me\u2003works\u2003my-skill-set\u2003Links'
               },
               { type: 'cmd', text: 'view all' },
               { type: 'res', text: 'please scroll' }
@@ -72,28 +72,31 @@ const Home: NextPage = () => {
           )}
         </div>
 
-        <div ref={refWorksTeleLabo} className="py-10">
+        <div className="py-10">
           <h2 className="text-5xl mb-3 w-full">Works</h2>
-          {inViewWorksTeleLabo && (
-            <div className="animate__animated animate__fadeInUp mb-10">
-              <Card
-                ImageSrc="/tele_labo_image.jpeg"
-                ImageAlt="テレラボのイメージ"
-                leading="テレラボ"
-                content="リモートワークや在宅勤務など、新しい働き方に特化した求人サイト。
+
+          <div ref={refWorksTeleLabo} className="mb-10">
+            {inViewWorksTeleLabo && (
+              <div className="animate__animated animate__fadeInUp">
+                <Card
+                  ImageSrc="/tele_labo_image.jpeg"
+                  ImageAlt="テレラボのイメージ"
+                  leading="テレラボ"
+                  content="リモートワークや在宅勤務など、新しい働き方に特化した求人サイト。
                 10ヶ月にして月間10万PV、累計55万PVを達成、求人掲載企業数も35社を超え、総額4500万円の資金調達も達成しました。
                 業界最大級の規模のリモートワーク特化メディアとなっています。
                 本プロダクトには、株式会社Draftyのエンジニアトップとして、インフラからバックエンド、フロントサイドまで幅広く担当しました。
                 "
-                tags={['Laravel', 'PHP', 'JavaScript', 'AWS', 'MySQL']}
-                link="https://tele-labo.jp/"
-              />
-            </div>
-          )}
+                  tags={['Laravel', 'PHP', 'JavaScript', 'AWS', 'MySQL']}
+                  link="https://tele-labo.jp/"
+                />
+              </div>
+            )}
+          </div>
 
           <div ref={refWorksMyNote} className="mb-10">
             {inViewWorksMyNote && (
-              <div className="animate__animated animate__fadeInUp mb-10">
+              <div className="animate__animated animate__fadeInUp">
                 <Card
                   ImageSrc="/no_image.png"
                   ImageAlt="MyNoteのイメージ"
@@ -105,6 +108,14 @@ const Home: NextPage = () => {
               </div>
             )}
           </div>
+        </div>
+
+        <div className="py-10">
+          <h2 className="text-5xl mb-3 w-full">My Skill Set</h2>
+        </div>
+
+        <div className="py-10">
+          <h2 className="text-5xl mb-3 w-full">Links</h2>
         </div>
       </main>
     </div>
