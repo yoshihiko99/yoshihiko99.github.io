@@ -80,7 +80,11 @@ const Home: NextPage = () => {
                 ImageSrc="/tele_labo_image.jpeg"
                 ImageAlt="テレラボのイメージ"
                 leading="テレラボ"
-                content="test"
+                content="リモートワークや在宅勤務など、新しい働き方に特化した求人サイト。
+                10ヶ月にして月間10万PV、累計55万PVを達成、求人掲載企業数も35社を超え、総額4500万円の資金調達も達成しました。
+                業界最大級の規模のリモートワーク特化メディアとなっています。
+                本プロダクトには、株式会社Draftyのエンジニアトップとして、インフラからバックエンド、フロントサイドまで幅広く担当しました。
+                "
                 tags={['Laravel', 'PHP', 'JavaScript', 'AWS', 'MySQL']}
                 link="https://tele-labo.jp/"
               />
@@ -94,7 +98,7 @@ const Home: NextPage = () => {
                   ImageSrc="/no_image.png"
                   ImageAlt="MyNoteのイメージ"
                   leading="MyNote"
-                  content="test"
+                  content="作成中..."
                   tags={['Next.js', 'React', 'Laravel', 'PHP', 'AWS', 'MySQL']}
                   link="https://tele-labo.jp/"
                 />

@@ -19,12 +19,12 @@ const Card: React.FC<Props> = (props) => {
           alt={props.ImageAlt}
         />
       </div>
-      <div>
-        <div className="m-6">
-          <h3 className="font-bold text-xl mb-2">{props.leading}</h3>
+      <div className="grid mx-3 mt-6">
+        <div className="mb-6">
+          <h3 className="font-bold text-3xl mb-6">{props.leading}</h3>
           <p className="text-gray-700 text-base">{props.content}</p>
         </div>
-        <div className="m-3">
+        <div className="mb-3">
           {props.tags.map((tag) => (
             <span
               className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
@@ -33,7 +33,7 @@ const Card: React.FC<Props> = (props) => {
             </span>
           ))}
         </div>
-        <div className="m-3 text-right">
+        <div className="mb-3 text-right max-h-min">
           <a
             className="transition duration-500 ease-in-out underline text-gray-600 hover:text-gray-400"
             href={props.link}
