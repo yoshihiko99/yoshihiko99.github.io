@@ -6,6 +6,7 @@ import React from 'react'
 import { useInView } from 'react-intersection-observer'
 import 'animate.css'
 import Card from '@/components/Card'
+import MiniCard from '@/components/MiniCard'
 
 const Home: NextPage = () => {
   const [refAboutMe, inViewAboutMe] = useInView({
@@ -63,10 +64,23 @@ const Home: NextPage = () => {
                   テックリードとしてエンジニアチームのリーダーを就任、メンバー7人を統率する。
                   2年間のインターン業務を経て、AWSクラウドサーバー構築、Webアプリケーション（フロントエンド・バックエンド）作成、社内用Pythonツールなど、幅広く開発業務を行う。
                 </p>
+                <a
+                  href="https://github.com/yoshihiko99"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <div className="flex my-6 transform duration-200 hover:opacity-50">
+                    <img
+                      alt="github"
+                      src="/GitHub-Mark-64px.png"
+                      className="w-6 mr-2"
+                    />
+                    <p>@yoshihiko99</p>
+                  </div>
+                </a>
               </div>
-              <div className="pt-10 md:pl-10 md:pt-0">
+              <div className="pt-10 md:pl-10 md:pt-0 flex">
                 <img
-                  className="rounded-full border-8 m-auto md:max-w-xs w-80"
+                  className="rounded-full border-8 m-auto w-60 md:max-w-xs md:w-full"
                   src="/no_image.png"
                   alt="プロフィール画像"
                 />
@@ -122,9 +136,26 @@ const Home: NextPage = () => {
         {/* </div> */}
 
         <div className="py-10">
-          <a id="links">
-            <h2 className="text-5xl mb-3 w-full">Links</h2>
-          </a>
+          <a id="links" />
+          <h2 className="text-5xl mb-3 w-full">Links</h2>
+          <div className="mb-6">
+            <MiniCard
+              title="【インタビュー】求人サイトの開発を行う東工大の学生エンジニア・餌打さんについて徹底取材！"
+              link="https://tele-labo.jp/article/interview/6152"
+            />
+          </div>
+          <div className="mb-6">
+            <MiniCard
+              title="【天才エンジニア？】餌打 優太さん | テックリードとして最強エンジニア組織を築く"
+              link="https://www.wantedly.com/companies/company_3769741/post_articles/381979"
+            />
+          </div>
+          <div className="mb-6">
+            <MiniCard
+              title="リモートワーカーのための求人メディア「テレラボ」を展開する株式会社Drafty、第三者割当増資により総額4500万円の資金調達を実施"
+              link="https://prtimes.jp/main/html/rd/p/000000004.000067180.html"
+            />
+          </div>
         </div>
       </main>
     </div>
