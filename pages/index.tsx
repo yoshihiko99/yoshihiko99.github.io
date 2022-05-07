@@ -40,7 +40,8 @@ const Home: NextPage = () => {
               { type: 'cmd', text: 'ls' },
               {
                 type: 'res',
-                text: 'about-me\u2003works\u2003my-skill-set\u2003Links'
+                // text: 'about-me\u2003works\u2003my-skill-set\u2003Links'
+                text: 'about-me\u2003works\u2003Links'
               },
               { type: 'cmd', text: 'view all' },
               { type: 'res', text: 'please scroll' }
@@ -114,11 +115,11 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <div className="py-10">
-          <a id="my-skill-set">
-            <h2 className="text-5xl mb-3 w-full">My Skill Set</h2>
-          </a>
-        </div>
+        {/* <div className="py-10"> */}
+        {/*  <a id="my-skill-set"> */}
+        {/*    <h2 className="text-5xl mb-3 w-full">My Skill Set</h2> */}
+        {/*  </a> */}
+        {/* </div> */}
 
         <div className="py-10">
           <a id="links">

@@ -24,7 +24,7 @@ const Navigation: React.FC<Props> = () => {
               </NavLink>
               <NavLink href="#about-me">About Me</NavLink>
               <NavLink href="#works">Works</NavLink>
-              <NavLink href="#my-skill-set">My Skill Set</NavLink>
+              {/* <NavLink href="#my-skill-set">My Skill Set</NavLink> */}
               <NavLink href="#links">Links</NavLink>
               <NavLink
                 href="https://github.com/yoshihiko99/yoshihiko99.github.io"
@@ -80,11 +80,10 @@ const Navigation: React.FC<Props> = () => {
               <ResponsiveNavLink href="/" active={router.pathname === '/'}>
                 Home
               </ResponsiveNavLink>
-              <ResponsiveNavLink
-                href="/works"
-                active={router.pathname === '/works'}>
-                Works
-              </ResponsiveNavLink>
+              <ResponsiveNavLink href="#about-me">About Me</ResponsiveNavLink>
+              <ResponsiveNavLink href="#works">Works</ResponsiveNavLink>
+              {/* <ResponsiveNavLink href="#my-skill-set">My Skill Set</ResponsiveNavLink> */}
+              <ResponsiveNavLink href="#links">Links</ResponsiveNavLink>
               <ResponsiveNavLink
                 href="https://github.com/yoshihiko99/yoshihiko99.github.io"
                 target={'_blank'}>
