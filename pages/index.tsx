@@ -10,6 +10,7 @@ import MiniCard from '@/components/MiniCard'
 import Particles from 'react-tsparticles'
 import { loadFull } from 'tsparticles'
 import ParticlesParams from '@/public/particlesjs-config.json'
+import { Engine } from 'tsparticles-engine'
 
 const Home: NextPage = () => {
   const [refAboutMe, inViewAboutMe] = useInView({
@@ -24,10 +25,7 @@ const Home: NextPage = () => {
     rootMargin: '-100px',
     triggerOnce: true
   })
-  const particlesInit = async (main) => {
-    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
+  const particlesInit = async (main: Engine) => {
     await loadFull(main)
   }
 
