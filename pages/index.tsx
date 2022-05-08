@@ -74,7 +74,7 @@ const Home: NextPage = () => {
                       src="/GitHub-Mark-64px.png"
                       className="w-6 mr-2"
                     />
-                    <p>@yoshihiko99</p>
+                    <p className="underline">@yoshihiko99</p>
                   </div>
                 </a>
               </div>
