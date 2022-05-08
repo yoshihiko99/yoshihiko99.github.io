@@ -40,7 +40,7 @@ const Home: NextPage = () => {
       <main className="w-full">
         <Particles
           init={particlesInit}
-          options={ParticlesParams}
+          options={ParticlesParams as any}
           className="-z-10 absolute"
         />
 
