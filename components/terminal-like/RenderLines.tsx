@@ -23,7 +23,7 @@ const RenderLines: React.VFC<Props> = ({
   lineClassName,
   typingInterval = 50,
   ComputerInterval = 200,
-  UserInterval = 1500
+  UserInterval = 2000
 }) => {
   const [typedLines, setTypedLines] = React.useState<Array<LineProps>>([])
 
