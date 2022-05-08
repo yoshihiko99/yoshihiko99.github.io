@@ -29,8 +29,10 @@
     "react": "^18.0.0",
     "react-dom": "18.0.0",
     "react-intersection-observer": "^8.34.0",
+    "react-tsparticles": "^2.0.6",
     "tailwindcss-safe-area": "^0.2.2",
-    "tsconfig-paths": "^3.14.1"
+    "tsconfig-paths": "^3.14.1",
+    "tsparticles": "^2.0.6"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.9.2",
