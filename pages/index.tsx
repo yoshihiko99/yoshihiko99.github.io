@@ -54,7 +54,6 @@ const Home: NextPage = () => {
               { type: 'cmd', text: 'ls' },
               {
                 type: 'res',
-                // text: 'about-me\u2003works\u2003my-skill-set\u2003Links'
                 text: 'about-me\u2003works\u2003Links'
               },
               { type: 'cmd', text: 'view all' },
@@ -97,7 +96,7 @@ const Home: NextPage = () => {
                   <div className="pt-10 md:pl-10 md:pt-0 flex">
                     <img
                       className="rounded-full border-8 m-auto w-60 md:max-w-xs md:w-full"
-                      src="/no_image.png"
+                      src="/profile.jpg"
                       alt="プロフィール画像"
                     />
                   </div>
