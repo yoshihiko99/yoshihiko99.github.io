@@ -50,7 +50,7 @@ const Home: NextPage = () => {
             lineClassName=""
             lines={[
               { type: 'cmd', text: 'pwd' },
-              { type: 'res', text: "Yuta Euchi's portfolio " },
+              { type: 'res', text: "Yuta Euchi's portfolio" },
               { type: 'cmd', text: 'ls' },
               {
                 type: 'res',
@@ -65,7 +65,7 @@ const Home: NextPage = () => {
           />
         </div>
 
-        <div className="bg-white">
+        <div className="bg-white pb-6">
           <div className="mx-auto max-w-5xl sm:w-3/5 px-8">
             <div ref={refAboutMe} className="py-28">
               <a id="about-me">
@@ -152,12 +152,6 @@ const Home: NextPage = () => {
               </div>
             </div>
 
-            {/* <div className="py-10"> */}
-            {/*  <a id="my-skill-set"> */}
-            {/*    <h2 className="text-5xl mb-3 w-full">My Skill Set</h2> */}
-            {/*  </a> */}
-            {/* </div> */}
-
             <div className="py-10">
               <a id="links" />
               <h2 className="text-5xl mb-3 w-full">Links</h2>
@@ -179,6 +173,10 @@ const Home: NextPage = () => {
                   link="https://prtimes.jp/main/html/rd/p/000000004.000067180.html"
                 />
               </div>
+            </div>
+
+            <div className="text-gray-400 text-center">
+              © 2022 Yuta Euchi. All Rights Reserved.
             </div>
           </div>
         </div>
