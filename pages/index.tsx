@@ -93,6 +93,7 @@ const Home: NextPage = () => {
                       </div>
                     </a>
                   </div>
+
                   <div className="pt-10 md:pl-10 md:pt-0 flex">
                     <img
                       className="rounded-full border-8 m-auto w-60 md:max-w-xs md:w-full"
