@@ -66,7 +66,10 @@ const Home: NextPage = () => {
 
         <div className="bg-white pb-6">
           <div className="mx-auto max-w-5xl sm:w-3/5 px-8">
-            <div ref={refAboutMe} className="py-28">
+            <div
+              ref={refAboutMe}
+              className="py-28"
+              style={{ minHeight: '600px' }}>
               <a id="about-me">
                 <h2 className="text-5xl mb-6 w-full">About Me</h2>
               </a>
@@ -105,7 +108,7 @@ const Home: NextPage = () => {
               )}
             </div>
 
-            <div className="py-10">
+            <div className="py-10" style={{ minHeight: '800px' }}>
               <a id="works">
                 <h2 className="text-5xl mb-3 w-full">Works</h2>
               </a>
@@ -133,19 +136,21 @@ const Home: NextPage = () => {
                 {inViewWorksMyNote && (
                   <div className="animate__animated animate__fadeInUp">
                     <Card
-                      ImageSrc="/no_image.png"
+                      ImageSrc="/mynote_image.jpg"
                       ImageAlt="MyNoteのイメージ"
                       leading="MyNote"
-                      content="作成中..."
+                      content="認証機能付きのシンプルなマークダウンエディターです。
+                      今まで業務で利用していたLaravelだけでなく、Next.jsやRESTful APIも学ぶために実装しました。
+                      開発で作成したコードはGithub上に公開しています。"
                       tags={[
                         'Next.js',
                         'React',
                         'Laravel',
                         'PHP',
-                        'AWS',
+                        'Github Pages',
                         'MySQL'
                       ]}
-                      link="https://tele-labo.jp/"
+                      link="https://mynote.euchi.jp"
                     />
                   </div>
                 )}
