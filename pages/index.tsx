@@ -11,6 +11,7 @@ import Particles from 'react-tsparticles'
 import { loadFull } from 'tsparticles'
 import ParticlesParams from '@/public/particlesjs-config.json'
 import { Engine } from 'tsparticles-engine'
+import ExternalLinkIcon from '@/components/ExternalLinkIcon'
 
 const Home: NextPage = () => {
   const [refAboutMe, inViewAboutMe] = useInView({
@@ -93,6 +94,7 @@ const Home: NextPage = () => {
                           className="w-6 mr-2"
                         />
                         <p className="underline">@yoshihiko99</p>
+                        <ExternalLinkIcon />
                       </div>
                     </a>
                   </div>

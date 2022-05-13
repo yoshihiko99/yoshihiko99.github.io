@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import NavLink from '@/components/NavLink'
 import ResponsiveNavLink from '@/components/ResponsiveNavLink'
 import Logo from '@/components/Logo'
+import ExternalLinkIcon from '@/components/ExternalLinkIcon'
 
 type Props = {}
 
@@ -30,6 +31,7 @@ const Navigation: React.FC<Props> = () => {
                 href="https://github.com/yoshihiko99/yoshihiko99.github.io"
                 target={'_blank'}>
                 Source
+                <ExternalLinkIcon color="#CCC" size="18px" />
               </NavLink>
             </div>
           </div>
@@ -82,7 +84,6 @@ const Navigation: React.FC<Props> = () => {
               </ResponsiveNavLink>
               <ResponsiveNavLink href="#about-me">About Me</ResponsiveNavLink>
               <ResponsiveNavLink href="#works">Works</ResponsiveNavLink>
-              {/* <ResponsiveNavLink href="#my-skill-set">My Skill Set</ResponsiveNavLink> */}
               <ResponsiveNavLink href="#links">Links</ResponsiveNavLink>
               <ResponsiveNavLink
                 href="https://github.com/yoshihiko99/yoshihiko99.github.io"
