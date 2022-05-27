@@ -27,6 +27,23 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Square+Peg&family=Ubuntu:wght@400&display=swap"
             rel="stylesheet"
           />
+          <title>Yuta Euchi’s Portfolio</title>
+          <meta
+            name="description"
+            content="エンジニア、Yuta Euchiのポートフォリオサイトです。"
+          />
+          <meta property="og:title" content="Yuta Euchi’s Portfoli" />
+          <meta
+            property="og:description"
+            content="エンジニア、Yuta Euchiのポートフォリオサイトです。"
+          />
+          {/* HACK: static url */}
+          <meta property="og:url" content="https://euchi.jp" />
+          <meta
+            name="twitter:card"
+            content="エンジニア、Yuta Euchiのポートフォリオサイトです。"
+          />
+          <meta property="og:image" content="https://euchi.jp/profile.jpg" />
         </Head>
         <body className="p-safe">
           <Main />

@@ -1,5 +1,4 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
 import Navigation from '@/components/Navigation'
 import Terminal from '@/components/terminal-like'
 import React from 'react'
@@ -32,10 +31,6 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      <Head>
-        <title>Yuta Euchi</title>
-      </Head>
-
       <Navigation />
 
       <main className="w-full">
