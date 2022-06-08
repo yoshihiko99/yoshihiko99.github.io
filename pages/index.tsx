@@ -147,7 +147,7 @@ const Home: NextPage = () => {
                         'Github Pages',
                         'MySQL'
                       ]}
-                      link="https://mynote.euchi.jp"
+                      link="https://mynote.euchi.jp/register"
                     />
                   </div>
                 )}
