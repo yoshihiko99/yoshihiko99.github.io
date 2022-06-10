@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "dev-build": "npm run build && npm run export && npm run start",
     "start": "next start",
     "lint": "run-s lint:*",
     "lint:eslint": "eslint . --ext .ts,.tsx --fix",
@@ -26,7 +27,7 @@
     "@mui/icons-material": "^5.6.2",
     "@mui/material": "^5.6.1",
     "animate.css": "^4.1.1",
-    "next": "12.1.5",
+    "next": "^12.1.5",
     "react": "^18.0.0",
     "react-dom": "18.0.0",
     "react-intersection-observer": "^8.34.0",
